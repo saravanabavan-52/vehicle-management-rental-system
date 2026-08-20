@@ -1,0 +1,366 @@
+.admin-layout {
+  background: #f4f7fb;
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  min-height: calc(100vh - 58px);
+  width: 100%;
+}
+
+.admin-layout__content {
+  min-width: 0;
+  padding: 24px;
+}
+
+.admin-sidebar {
+  background: linear-gradient(180deg, #1e3a8a, #0f766e);
+  color: #ffffff;
+  min-height: calc(100vh - 58px);
+  padding: 24px 18px;
+  position: sticky;
+  top: 58px;
+}
+
+.admin-sidebar__eyebrow {
+  color: #8dd4ff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+  margin: 0 0 6px;
+  text-transform: uppercase;
+}
+
+.admin-sidebar__title {
+  font-size: 25px;
+  margin: 0 0 24px;
+}
+
+.admin-sidebar__nav {
+  display: grid;
+  gap: 8px;
+}
+
+.admin-sidebar__link {
+  border-radius: 8px;
+  color: #d8e3f3;
+  display: block;
+  font-weight: 700;
+  padding: 12px 14px;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.admin-sidebar__link:hover,
+.admin-sidebar__link.active {
+  background: #2f80ed;
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+.admin-stack {
+  display: grid;
+  gap: 20px;
+}
+
+.admin-hero,
+.admin-panel,
+.admin-stat-card,
+.admin-section-card,
+.admin-report-card {
+  background: #ffffff;
+  border: 1px solid #dce6f2;
+  border-radius: 8px;
+  box-shadow: 0 10px 28px rgba(23, 32, 51, 0.08);
+}
+
+.admin-hero {
+  align-items: center;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 28px;
+}
+
+.admin-hero h1,
+.admin-panel h1,
+.admin-panel h2 {
+  color: #172033;
+  margin: 0 0 8px;
+}
+
+.admin-hero h1 {
+  font-size: 34px;
+}
+
+.admin-hero p,
+.admin-panel p,
+.admin-report-card p {
+  color: #64748b;
+  margin: 0;
+}
+
+.admin-hero__panel {
+  background: #eef6ff;
+  border: 1px solid #cfe3fb;
+  border-radius: 8px;
+  display: grid;
+  flex: 0 0 230px;
+  gap: 5px;
+  padding: 18px;
+}
+
+.admin-hero__panel span,
+.admin-stat-card span,
+.admin-report-card span,
+.admin-kicker {
+  color: #53657d;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.admin-hero__panel strong {
+  color: #172033;
+  font-size: 28px;
+}
+
+.admin-hero__panel small,
+.admin-stat-card small {
+  color: #64748b;
+}
+
+.admin-kicker {
+  color: #2f80ed;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.admin-stat-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.admin-stat-grid--compact {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 22px 0;
+}
+
+.admin-stat-card {
+  display: grid;
+  gap: 6px;
+  padding: 18px;
+}
+
+.admin-stat-card strong {
+  color: #172033;
+  font-size: 28px;
+}
+
+.admin-section-grid,
+.admin-report-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.admin-section-card {
+  color: #172033;
+  display: grid;
+  gap: 10px;
+  min-height: 160px;
+  padding: 20px;
+  text-decoration: none;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.admin-section-card:hover {
+  border-color: #2f80ed;
+  transform: translateY(-3px);
+}
+
+.admin-section-card h3 {
+  margin: 0;
+}
+
+.admin-section-card p {
+  color: #64748b;
+  margin: 0;
+}
+
+.admin-section-card span {
+  align-self: end;
+  color: #2f80ed;
+  font-weight: 800;
+}
+
+.admin-panel {
+  padding: 24px;
+}
+
+.admin-panel__header {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.admin-button {
+  background: #2f80ed;
+  border: 0;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 800;
+  min-height: 42px;
+  padding: 10px 16px;
+}
+
+.admin-button:hover {
+  background: #1f6fd2;
+}
+
+.admin-list,
+.admin-settings-list,
+.admin-table {
+  display: grid;
+  gap: 10px;
+}
+
+.admin-list__row,
+.admin-table__head,
+.admin-table__row,
+.admin-setting {
+  align-items: center;
+  background: #f8fafc;
+  border: 1px solid #e3ebf5;
+  border-radius: 8px;
+  display: grid;
+  gap: 12px;
+  padding: 13px 14px;
+}
+
+.admin-list__row {
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.admin-table__head,
+.admin-table__row {
+  grid-template-columns: 1.3fr 1fr 0.8fr 0.8fr;
+}
+
+.admin-table__head--five,
+.admin-table__row--five {
+  grid-template-columns: 1.4fr 1fr 0.8fr 0.8fr 0.8fr;
+}
+
+.admin-table__head--six,
+.admin-table__row--six {
+  grid-template-columns: 0.8fr 1fr 1.2fr 1fr 0.8fr 0.9fr;
+}
+
+.admin-table__head--user,
+.admin-table__row--user {
+  grid-template-columns: 1.4fr 1fr auto;
+}
+
+.admin-table__head {
+  background: #eaf2fb;
+  color: #53657d;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.admin-table__row strong,
+.admin-list__row strong {
+  color: #172033;
+}
+
+.admin-table__row p {
+  color: #64748b;
+  margin: 5px 0 0;
+}
+
+.admin-status {
+  background: #e8f7ee;
+  border-radius: 999px;
+  color: #17683a;
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 800;
+  justify-content: center;
+  padding: 6px 10px;
+  width: fit-content;
+}
+
+.admin-report-card {
+  display: grid;
+  gap: 8px;
+  padding: 20px;
+}
+
+.admin-report-card strong {
+  color: #172033;
+  font-size: 30px;
+}
+
+.admin-setting {
+  cursor: pointer;
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.admin-setting span {
+  color: #172033;
+  font-weight: 700;
+}
+
+.admin-setting input {
+  height: 20px;
+  width: 20px;
+}
+
+@media (max-width: 1050px) {
+  .admin-stat-grid,
+  .admin-stat-grid--compact {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-table {
+    overflow-x: auto;
+  }
+
+  .admin-table__head,
+  .admin-table__row {
+    min-width: 760px;
+  }
+}
+
+@media (max-width: 760px) {
+  .admin-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-sidebar {
+    min-height: auto;
+    position: static;
+  }
+
+  .admin-layout__content {
+    padding: 16px;
+  }
+
+  .admin-hero,
+  .admin-panel__header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .admin-hero__panel {
+    flex-basis: auto;
+  }
+
+  .admin-stat-grid,
+  .admin-stat-grid--compact {
+    grid-template-columns: 1fr;
+  }
+}
