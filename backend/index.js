@@ -19,8 +19,7 @@ connectDatabase();
 app.use(
   cors({
     origin: [
-      "http://localhost:5173",
-      "http://localhost:5175"
+      "https://vehicle-management-rental-system-omd3-mmd1k6dfu.vercel.app"
     ],
     credentials: true
   })
